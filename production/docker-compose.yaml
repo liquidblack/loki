@@ -49,3 +49,15 @@ services:
       - "3000:3000"
     networks:
       - loki
+  syslog-ng:
+    command: -edv
+    depends_on:
+      - promtail
+    image: balabit/syslog-ng:latest
+    networks:
+      - loki
+    ports:
+      - 514:514/udp
+      - 601:601/tcp
+      - 6514:6514/tcp
+    restart: always
