@@ -57,6 +57,8 @@ services:
       - "-c"
       - |
         chmod 0640 /etc/syslog-ng/syslog-ng.conf
+        # Start syslog-ng with the configuration file
+        /usr/sbin/syslog-ng -c /etc/syslog-ng/syslog-ng.conf
     depends_on:
       - promtail
     image: balabit/syslog-ng:latest
