@@ -67,4 +67,4 @@ services:
       - 601:601/tcp
       - 6514:6514/tcp
     volumes:
-      - ./docker/config:/etc/syslog-ng:ro
+      - ./docker/config:/etc/syslog-ng
