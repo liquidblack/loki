@@ -67,8 +67,5 @@ services:
       - 601:60100/tcp
       - 6514:6514/tcp
     volumes:
-     - type: bind
-       source: ./docker/config
-       target: /config
-       read_only: true
+     - ./docker/config:/config
 
