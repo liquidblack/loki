@@ -66,7 +66,7 @@ services:
       - 6514:6514/tcp
     volumes:
      - type: bind
-       source: ./docker/config/syslog-ng.conf
-       target: /etc/syslog-ng/syslog-ng.conf
+       source: ./docker/config
+       target: /etc/syslog-ng
        read_only: true
 
