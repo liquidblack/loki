@@ -50,10 +50,14 @@ services:
 
   
   syslog-ng:
-    command: -edv --no-caps
+    image: lscr.io/linuxserver/syslog-ng:latest
+    container_name: syslog-ng
+    environment:
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped
     depends_on:
       - promtail
-    image: balabit/syslog-ng:latest
     networks:
       - loki
     ports:
