@@ -1,5 +1,3 @@
-version: "3"
-
 networks:
   loki:
 
@@ -52,6 +50,7 @@ services:
 
   
   syslog-ng:
+    command: -edv
     depends_on:
       - promtail
     image: balabit/syslog-ng:latest
