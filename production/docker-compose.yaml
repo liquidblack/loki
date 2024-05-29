@@ -50,7 +50,7 @@ services:
 
   
   syslog-ng:
-    command: -edv
+    command: -edv --no-caps
     depends_on:
       - promtail
     image: balabit/syslog-ng:latest
