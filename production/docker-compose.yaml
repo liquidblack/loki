@@ -62,4 +62,4 @@ services:
       - 6514:6514/tcp
     restart: always
     volumes:
-      - ./docker/config:/etc/syslog-ng/syslog-ng:ro
+      - ./docker/config:/etc/syslog-ng:ro
