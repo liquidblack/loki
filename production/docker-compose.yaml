@@ -63,3 +63,4 @@ services:
     restart: always
     volumes:
       - ./docker/config:/etc/syslog-ng:ro
+    command: -c /etc/syslog-ng/syslog-ng.conf --mode 0640  # Sets read permission for owner (syslog-ng user)
