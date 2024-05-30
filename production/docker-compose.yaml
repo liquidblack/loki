@@ -67,5 +67,5 @@ services:
       - 601:60100/tcp
       - 6514:6514/tcp
     volumes:
-     - syslog-ng:/config
+     - /var/lib/docker/volumes/syslog-ng/_data:/config
      - /var/log:/var/log #optional
